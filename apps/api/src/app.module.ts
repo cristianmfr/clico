@@ -6,6 +6,7 @@ import { GraphQLModule } from '@nestjs/graphql'
 import { GqlConfigService } from './config/graphql.config'
 
 import { UserModule } from 'modules/user/user.module'
+import { AuthModule } from 'modules/auth/auth.module'
 
 @Module({
 	imports: [
@@ -14,6 +15,7 @@ import { UserModule } from 'modules/user/user.module'
 			driver: ApolloDriver,
 			useClass: GqlConfigService,
 		}),
+		AuthModule,
 		UserModule,
 	],
 	controllers: [],
