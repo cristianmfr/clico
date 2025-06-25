@@ -1,0 +1,33 @@
+{
+  "name": "@clico/database",
+  "version": "0.0.0",
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "deploy": "prisma migrate deploy",
+    "studio": "prisma studio",
+    "reset": "prisma migrate reset",
+    "build": "tsup",
+    "prebuild": "pnpm generate",
+    "predev": "pnpm generate",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "prisma": "^6.8.2",
+    "tsup": "^8.5.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "@prisma/extension-accelerate": "^1.1.0",
+    "dotenv-cli": "^7.4.2",
+    "prettier": "^3.5.3"
+  },
+  "exports": {
+    "./client": "./src/index.ts",
+    "./src/types": "./src/types/index.js"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  }
+}

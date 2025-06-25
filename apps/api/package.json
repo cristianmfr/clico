@@ -19,6 +19,9 @@
 		"rxjs": "^7.8.1"
 	},
 	"devDependencies": {
+		"@clico/eslint": "workspace:*",
+		"@clico/prettier": "workspace:*",
+		"@clico/typescript": "workspace:*",
 		"@eslint/eslintrc": "^3.2.0",
 		"@eslint/js": "^9.18.0",
 		"@nestjs/cli": "^11.0.0",
@@ -41,9 +44,6 @@
 		"ts-node": "^10.9.2",
 		"tsconfig-paths": "^4.2.0",
 		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.20.0",
-		"@clico/typescript": "workspace:*",
-		"@clico/eslint": "workspace:*",
-		"@clico/prettier": "workspace:*"
+		"typescript-eslint": "^8.20.0"
 	}
 }

@@ -3,10 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "app:build": "turbo run build",
+    "app:dev": "turbo run dev",
+    "api:dev": "cd apps/api && pnpm with-env pnpm dev",
+    "api:build": "cd apps/api && pnpm with-env pnpm build",
+    "api:prod": "cd apps/api && pnpm with-env pnpm prod",
+    "web:dev": "cd apps/web && pnpm with-env pnpm dev",
+    "web:build": "cd apps/web && pnpm with-env pnpm build",
+    "web:prod": "cd apps/web && pnpm with-env pnpm prod",
+    "engine:dev": "cd apps/engine && pnpm with-env pnpm dev",
+    "engine:build": "cd apps/engine && pnpm with-env pnpm build",
+    "engine:prod": "cd apps/engine && pnpm with-env pnpm prod",
+    "database:migrate": "cd packages/database && pnpm with-env pnpm migrate",
+    "database:deploy": "cd packages/database && pnpm with-env pnpm deploy",
+    "database:studio": "cd packages/database && pnpm with-env pnpm studio",
+    "database:reset": "cd packages/database && pnpm with-env pnpm reset",
+    "prettier:format": "prettier . --write"
   },
   "devDependencies": {
     "@clico/eslint": "workspace:*",
