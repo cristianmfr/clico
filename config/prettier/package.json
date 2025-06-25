@@ -1,0 +1,12 @@
+{
+  "name": "@clico/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./base.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "extends": "@clico/typescript/base.json"
+}
