@@ -7,6 +7,18 @@ import { hash } from 'bcryptjs'
 export class UserService {
 	constructor(private readonly prisma: PrismaService) {}
 
+	async listUsers() {
+		return this.prisma.member.findMany({
+			include: { user: true, company: true },
+		})
+	}
+
+	async findUserById(id: string) {
+		return this.prisma.user.findUnique({
+			where: { id },
+		})
+	}
+
 	async createUser(data: CreateUserDTO) {
 		const { name, email, password, role, companyName, companyDescription } =
 			data
@@ -53,5 +65,14 @@ export class UserService {
 		})
 
 		return newUser
+	}
+
+	async deleteUser(id: string) {
+		await this.prisma.user.delete({
+			where: { id },
+			include: { member_on: true },
+		})
+
+		return 'USER DELETED SUCCESSFULLY'
 	}
 }

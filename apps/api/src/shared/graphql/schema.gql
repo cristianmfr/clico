@@ -42,11 +42,12 @@ enum roles {
 }
 
 type Query {
-  listUsers: String!
+  listUsers: [Member!]!
 }
 
 type Mutation {
   createUser(data: CreateUserDTO!): Member!
+  deleteUser(id: String!): String!
 }
 
 input CreateUserDTO {
