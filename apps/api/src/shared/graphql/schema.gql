@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  email: String!
+  resetToken: String
+  isActive: Boolean!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Company {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  description: String
+}
+
+type Member {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  role: roles!
+  user: User!
+  company: Company!
+}
+
+enum roles {
+  admin
+  owner
+  member
+  billing
+}
+
+type Query {
+  listUsers: String!
+}
+
+type Mutation {
+  createUser(data: CreateUserDTO!): Member!
+}
+
+input CreateUserDTO {
+  name: String!
+  email: String!
+  password: String!
+  role: roles!
+  companyName: String!
+  companyDescription: String
+}
