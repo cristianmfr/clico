@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = { transpilePackages: ["@clico/ui"] };
+const nextConfig = { transpilePackages: ['@clico/ui'] }
 
-export default nextConfig;
+export default nextConfig

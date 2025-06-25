@@ -1,11 +1,11 @@
 {
-  "extends": "@clico/typescript/react-library.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@clico/ui/*": ["./src/*"]
-    }
-  },
-  "include": ["."],
-  "exclude": ["node_modules", "dist"]
+	"extends": "@clico/typescript/react-library.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@clico/ui/*": ["./src/*"]
+		}
+	},
+	"include": ["."],
+	"exclude": ["node_modules", "dist"]
 }

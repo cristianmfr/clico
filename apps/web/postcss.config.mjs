@@ -1,1 +1,1 @@
-export { default } from "@clico/ui/postcss.config";
+export { default } from '@clico/ui/postcss.config'
